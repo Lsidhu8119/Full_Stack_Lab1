@@ -1,62 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complexicon</title>
-    <!-- link to stylesheet -->
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixell River Financial — Staff & Organization</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-    <!-- Each tag describes an HTML element -->
-    <nav>
-        <!-- "Parent" elements can contain nested "child" elements -->
-         <!-- tag class property allows element to be selected from CSS/JS -->
-        <div class="page-links">
-            <span>
-                <!-- Tag properties affect behaviour -->
-                <a href="#">Home</a>
-            </span>
-            <span>
-                <a href="#">Top Terms</a>
-            </span>
-            <span>
-                <a href="#">My Terms</a>
-            </span>
-            <span>
-                <a href="#">My Contexts</a>
-            </span>
-        </div>
-        <div class="user-management-links">
-            <span>
-                <a href="#">Log In</a>
-            </span>
-        </div>
-    </nav>
-    <header>
-        <h1>Complexicon</h1>
-        <span>Make complex terms simple to understand!</span>
-    </header>
-    <main>
-        <section class="search">
-            <h2>What do you want to learn about?</h2>
-            <form action="#">
-                <input type="text" name="field-term" placeholder="Enter a word, phrase, or acronym...">
-                <input type="submit" value="Search">
-            </form>
-        </section>
-        <section class="top-terms">
-            <h2>Today's Top Terms:</h2>
-            <ol class="top-terms__list">
-                <!-- load terms -->
-            </ol>
-        </section>
-    </main>
-    <footer>
-        Complexicon &#169; Me, 20XX
-    </footer>
-    <!-- link to script -->
-     <!-- HTML loads elements line-by-line, including linked scripts -->
-    <script src="script.js"></script>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="brand">
+      <!-- Simple inline logo -->
+      <svg class="brand__logo" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 21h18v-2H3v2zm2-3h14V3H5v15zm2-2V5h10v11H7zm2-2h2V7H9v7zm4 0h2V7h-2v7z" />
+      </svg>
+      <span class="brand__name">Pixell River Financial</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" aria-current="page">Employees</a></li>
+      <li><a href="#">Organization</a></li>
+    </ul>
+  </nav>
+
+  <header class="site-header">
+    <h1>Staff & Organization</h1>
+    <p>Welcome to the Pixell River Financial Employee Directory.</p>
+  </header>
+
+  <main id="content">
+    <h2>Employee Directory</h2>
+    <!-- Employee sections injected dynamically by script.js -->
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span>Pixell River Financial</span> <span id="copyright-year"></span>.</small>
+  </footer>
+
+  <!-- Employee data first, then script -->
+  <script src="./employees.js"></script>
+  <script src="./script.js" defer></script>
 </body>
 </html>
