@@ -1,0 +1,5 @@
+[
+  { "department": "Administration", "employees": ["Zoë Robins", "Madeleine Madden"] },
+  { "department": "Audit", "employees": ["Josha Sadowski", "Kate Fleetwood"] },
+  { "department": "Banking Operations", "employees": ["Priyanka Bose", "Hammed Animashaun"] }
+]

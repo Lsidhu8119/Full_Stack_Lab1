@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { NavBar } from "./components/NavBar";
+import { Header } from "./components/header";
+import { Footer } from "./components/Footer";
+import { DepartmentCard } from "./components/DepartmentCard";
+import departmentsData from "./data/employees.json";
+import type { Department } from "./types";
 
-function App() {
-  const [count, setCount] = useState(0)
+import "./index.css";
+
+const App: React.FC = () => {
+  const departments: Department[] = departmentsData;
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavBar />
+      <Header />
+      <main>
+        <h2>Our Staff</h2>
+        {departments.map((dept, index) => (
+          <DepartmentCard key={index} department={dept} />
+        ))}
+      </main>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
